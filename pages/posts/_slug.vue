@@ -1,14 +1,15 @@
 <template>
-  <div class="container">
+  <div class="container blog">
     <div class="post-head">
-      <h1 class="title" style="margin-bottom: 0;">{{post.attributes.title}}</h1>
+      <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
       <img :src="post.attributes.image" v-if="post.attributes.image">
-      <div>
-        <div class="subtitle" style="margin: 0">{{post.attributes.date}}</div>
-        <div class="subtitle">
-          <span v-for="tag in post.attributes.tags" >
+      <div class="has-margin-bottom-10 has-padding-left-5">
+        <div class="subtitle is-size-7">
+          <Fas i="calendar-alt"/>
+          {{post.attributes.date}} |
+          <span v-for="tag in post.attributes.tags">
             <nuxt-link :to="'/tag/'+tag" style="padding-right: 0.5em">
-              #{{tag}}
+              {{tag}}
             </nuxt-link>
           </span>
         </div>
@@ -19,9 +20,14 @@
 </template>
 
 <script>
+  import Fas from '~/components/Fas';
+
   export default {
+    components: {
+      Fas
+    },
     async asyncData({ params }) {
-      let post = await import(`~/content/posts/${params.slug}.md`);
+      let post = await import(`~/content/posts/${params.slug}.md`)
       return { post }
     },
     head() {
@@ -41,3 +47,15 @@
   }
 </script>
 
+<style scoped lang="scss">
+  .blog {
+    margin: 1em;
+  }
+
+  .post {
+
+    &--title {
+      margin-bottom: 0.25em;
+    }
+  }
+</style>
