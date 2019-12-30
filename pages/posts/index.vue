@@ -1,16 +1,22 @@
 <template>
-  <div>
-    <h1>My blog posts:</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.attributes.title">
-        <nuxt-link :to="'/posts' + post.attributes.slug">
-          {{post.attributes.title}}
-        </nuxt-link>
-      </li>
-    </ul>
+  <div class="container">
+    <h1 class="title">My blog posts:</h1>
+    <section class="posts">
+      <ul>
+        <li v-for="post in posts" :key="post.attributes.title" class="columns">
+          <p class="title is-4">
+            <nuxt-link :to="'/posts' + post.attributes.slug">
+              {{post.attributes.title}}
+            </nuxt-link>
+          </p>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 <script>
+  import moment from 'moment';
+  
   export default {
     async asyncData() {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
