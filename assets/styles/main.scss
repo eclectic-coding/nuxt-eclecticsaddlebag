@@ -1,0 +1,10 @@
+@import "~bulma/sass/utilities/_all.sass";
+
+// Variables
+$title-color: $primary;
+
+.title {
+  color: $primary;
+}
+
+@import "~bulma";

@@ -2,7 +2,7 @@
 title: Hello World
 slug: /hello-world
 short: How to build a SEO optimized, static file blog with nuxtjs and markdown files. Including a sitemap.xml and catagory or tag pages.
-date: 07/11/2019
+date: 2019-7-11
 image:
 tags:
   - code

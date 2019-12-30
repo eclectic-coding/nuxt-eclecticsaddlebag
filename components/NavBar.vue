@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
@@ -19,17 +19,8 @@
       <div id="navbarBasicExample" class="navbar-menu"
            @click="showNav = !showNav" :class="{ 'is-active': showNav}">
         <div class="navbar-end">
-          <a class="navbar-item">
-            Home
-          </a>
-
-          <a class="navbar-item">
-            Documentation
-          </a>
-
-          <div class="navbar-item">
-            More
-          </div>
+          <NuxtLink to="/" class="navbar-item">Home</NuxtLink>
+          <NuxtLink to="/posts" class="navbar-item">Blog</NuxtLink>
         </div>
       </div>
     </nav>
@@ -46,3 +37,5 @@
     name: 'NavBar'
   }
 </script>
+
+
