@@ -3,11 +3,12 @@
     <div class="post-head">
       <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
       <img :src="post.attributes.image" v-if="post.attributes.image">
-      <div class="has-margin-bottom-10 has-padding-left-5">
-        <div class="subtitle is-size-7">
-          <Fas i="calendar-alt"/>
-          {{post.attributes.date}} |
-          <span v-for="tag in post.attributes.tags">
+      <div class="has-margin-bottom-15 has-padding-left-5">
+        <div class="subtitle post-meta">
+          <Fas i="calendar-alt" />
+          <span class="has-margin-right-10">{{ parsedDate }}</span>
+          <span v-for="tag in post.attributes.tags"
+                class="tag has-margin-right-10 is-primary is-light">
             <nuxt-link :to="'/tag/'+tag" style="padding-right: 0.5em">
               {{tag}}
             </nuxt-link>
@@ -20,7 +21,9 @@
 </template>
 
 <script>
-  import Fas from '~/components/Fas';
+  import Fas from '~/components/Fas'
+  import Prism from '~/plugins/prism'
+
 
   export default {
     components: {
@@ -29,6 +32,9 @@
     async asyncData({ params }) {
       let post = await import(`~/content/posts/${params.slug}.md`)
       return { post }
+    },
+    mounted() {
+      Prism.highlightAll()
     },
     head() {
       return {
@@ -43,7 +49,13 @@
           href: 'https://derkinzi.de' + this.post.attributes.slug
         }]
       }
-    }
+    },
+    computed: {
+      parsedDate() {
+        const postDate = new Date(this.post.attributes.date)
+        return postDate.toDateString()
+      }
+    },
   }
 </script>
 
@@ -52,10 +64,7 @@
     margin: 1em;
   }
 
-  .post {
-
-    &--title {
-      margin-bottom: 0.25em;
-    }
+  .post-meta {
+    font-size: 0.8em;
   }
 </style>

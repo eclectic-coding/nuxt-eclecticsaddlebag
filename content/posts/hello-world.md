@@ -2,7 +2,7 @@
 title: Hello World
 slug: /hello-world
 short: How to build a SEO optimized, static file blog with nuxtjs and markdown files. Including a sitemap.xml and catagory or tag pages.
-date: 2019-7-11
+date: 2019-07-11
 image:
 tags:
   - code
@@ -17,14 +17,11 @@ Lorem markdownum Phrygiis, Polydori, certe et ipse artibus. Sub *sunt
 discrimina* manu; mihi misit iam cetera labori pectore. Enim mihi temperiemque
 regit; levat, vale magni quid colla qua: relictus et.
 
-    if (keywords + x_bittorrent_koffice >= chip_software_ad(market_edutainment(
-            1, crt_web), epsPython)) {
-        resources = kerningFirmware.social(dac);
-        keyInfringement(5);
-    }
-    boot *= scraping;
-    dualClient.requirements += traceroute + 79 - toggleMirrored;
-
+```javascript
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css' // or whatever theme you like
+export default Prism
+```
 Figens muneris fama laesum inmunitamque cervice magna in omnia! Ferox non Pythia
 pervia. [Umbras](http://habitant.net/) ad spectare viris mea ducumque
 lascivitque veluti tamen, colerent mihi cupio animam tamen, equina. Nomen
