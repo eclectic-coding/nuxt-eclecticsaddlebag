@@ -55,7 +55,7 @@
         link: [
           {
             rel: 'canonical',
-            href: 'https://eclecticsaddlebag.com/blog'
+            href: 'https://eclecticsaddlebag.com/posts'
           }
         ]
       }

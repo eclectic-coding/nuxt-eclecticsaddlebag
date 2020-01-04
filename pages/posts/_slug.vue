@@ -45,7 +45,7 @@
         }],
         link: [{
           rel: 'canonical',
-          href: 'https://derkinzi.de' + this.post.attributes.slug
+          href: 'https://eclecticsaddlebag.com' + this.post.attributes.slug
         }]
       }
     },
