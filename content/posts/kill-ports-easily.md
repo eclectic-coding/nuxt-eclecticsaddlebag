@@ -3,7 +3,7 @@ title: 'Kill Blocked Ports'
 slug: /kill-ports-easily
 short: Simple fix for the message - Something is already running at port 8000
 date: 2019-07-22
-image:
+image: blocked.jpg
 tags:
     - Gatsby
     - React

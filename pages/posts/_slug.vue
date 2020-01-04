@@ -24,7 +24,6 @@
   import Fas from '~/components/Fas'
   import Prism from '~/plugins/prism'
 
-
   export default {
     components: {
       Fas

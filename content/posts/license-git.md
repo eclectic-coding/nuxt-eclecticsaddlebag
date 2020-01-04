@@ -3,7 +3,7 @@ title: License file for GIT
 slug: /license-git
 short: Add a license file to GIT in VSCODE
 date: 2019-07-23
-image:
+image: license_git.jpg
 tags:
     - VSCode
     - GIT

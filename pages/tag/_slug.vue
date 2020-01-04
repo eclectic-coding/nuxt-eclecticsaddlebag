@@ -9,10 +9,7 @@
   </div>
 </template>
 <script>
-  import PostShort from '../../components/PostShort'
-
   export default {
-    components: { PostShort },
     async asyncData({ params }) {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))
