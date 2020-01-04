@@ -1,10 +1,11 @@
 <template>
-  <div class="container blog">
+<!--  TODO - Add Hero section-->
+  <div class="container has-margin-15">
     <div class="post-head">
       <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
       <img :src="post.attributes.image" v-if="post.attributes.image">
-      <div class="has-margin-bottom-15 has-padding-left-5">
-        <div class="subtitle post-meta">
+      <div class="has-margin-bottom-15">
+        <div class="subtitle is-6">
           <Fas i="calendar-alt" />
           <span class="has-margin-right-10">{{ parsedDate }}</span>
           <span v-for="tag in post.attributes.tags"
@@ -57,13 +58,3 @@
     },
   }
 </script>
-
-<style scoped lang="scss">
-  .blog {
-    margin: 1em;
-  }
-
-  .post-meta {
-    font-size: 0.8em;
-  }
-</style>
