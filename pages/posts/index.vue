@@ -38,10 +38,8 @@
 </template>
 <script>
   import moment from 'moment'
-  import PostPreview from '../../components/PostPreview'
 
   export default {
-    components: { PostPreview },
     async asyncData() {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))
