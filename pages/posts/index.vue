@@ -1,45 +1,38 @@
 <template>
-  <div class="container">
+  <div >
     <h1 class="title">My Blog Posts</h1>
 
-    <section class="posts">
+    <main class="posts">
       <div v-for="post in posts" :key="post.attributes.title"
            class="card card__effect is-horizontal columns has-margin-15">
-        <div class="card-image column is-one-quarter">
-          <nuxt-link :to="`/posts` + post.attributes.slug">
-            <figure class="image">
-              <img v-if="post.attributes.image" :src="imgSrc(post)"
-                   :alt="post.attributes.title">
-            </figure>
-          </nuxt-link>
-        </div>
+        <PostImg :post="post" />
         <div class="card-content column is-three-quarter">
-          <p class="title is-4">
-            <nuxt-link :to="`/posts` + post.attributes.slug">
-              <h2>{{ post.attributes.title }}</h2>
-            </nuxt-link>
-          </p>
-          <p>
-            <span class="has-margin-right-10">{{ parsedDate(post) }}</span>
-            <span v-for="tag in post.attributes.tags"
-                  class="tag has-margin-right-10 is-primary is-light">
-            <nuxt-link :to="'/tag/'+tag" style="padding-right: 0.5em">
-              {{tag}}
-            </nuxt-link>
-          </span>
-          </p>
-          <div class="content">
-            {{ post.attributes.short }}
-          </div>
+          <PostTitle :post="post" />
+<!--          <p class="has-margin-bottom-15">-->
+<!--            <small class="has-margin-right-10">{{ parsedDate(post) }}</small>-->
+<!--            <span v-for="tag in post.attributes.tags"-->
+<!--                  class="tag has-margin-right-10 is-primary is-light">-->
+<!--              <nuxt-link :to="'/tag/'+tag" style="padding-right: 0.5em">-->
+<!--                {{tag}}-->
+<!--              </nuxt-link>-->
+<!--            </span>-->
+<!--          </p>-->
+          <PostMeta :post="post" />
+          <PostContent :post="post" />
         </div>
       </div>
-    </section>
+    </main>
   </div>
 </template>
 <script>
   import moment from 'moment'
+  import PostImg from '../../components/Post/PostImg'
+  import PostTitle from '../../components/Post/PostTitle'
+  import PostContent from '../../components/Post/PostContent'
+  import PostMeta from '../../components/Post/PostMeta'
 
   export default {
+    components: { PostMeta, PostContent, PostTitle, PostImg },
     async asyncData() {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))

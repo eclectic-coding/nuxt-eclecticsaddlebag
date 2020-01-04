@@ -1,7 +1,7 @@
 ---
 title: 'Gitignore in VSCode'
 slug: /gitignore-in-vscode
-short: This week I published an article about automating the creation of LICENSE file for GIT in VSCODE. I wanted to consider the same methodology for the obligatory `.gitignore` file.
+short: This week I published an article about automating the creation of LICENSE file for GIT in VSCODE. I wanted to consider the same methodology for the obligatory gitignore file.
 date: 2019-07-25
 tags:
     - GIT
