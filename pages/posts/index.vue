@@ -1,22 +1,12 @@
 <template>
   <div >
     <h1 class="title">My Blog Posts</h1>
-
     <main class="posts">
       <div v-for="post in posts" :key="post.attributes.title"
            class="card card__effect is-horizontal columns has-margin-15">
         <PostImg :post="post" />
         <div class="card-content column is-three-quarter">
           <PostTitle :post="post" />
-<!--          <p class="has-margin-bottom-15">-->
-<!--            <small class="has-margin-right-10">{{ parsedDate(post) }}</small>-->
-<!--            <span v-for="tag in post.attributes.tags"-->
-<!--                  class="tag has-margin-right-10 is-primary is-light">-->
-<!--              <nuxt-link :to="'/tag/'+tag" style="padding-right: 0.5em">-->
-<!--                {{tag}}-->
-<!--              </nuxt-link>-->
-<!--            </span>-->
-<!--          </p>-->
           <PostMeta :post="post" />
           <PostContent :post="post" />
         </div>

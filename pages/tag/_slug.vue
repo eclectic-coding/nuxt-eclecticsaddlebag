@@ -1,23 +1,74 @@
 <template>
   <div>
-    <h1 :key="$route.params.slug">Posts:</h1>
-    <ul>
-      <li v-for="post in posts" :key="post.attributes.title">
-        <PostShort :post="post" />
-      </li>
-    </ul>
+<!--    TODO - add tag cloud-->
+    <div :key="$route.params.slug" class="title is-4">
+      {{ tagTitle() }}
+    </div>
+    <main class="posts">
+      <div v-for="post in posts" :key="post.attributes.title"
+           class="card card__effect is-horizontal columns has-margin-15">
+        <PostImg :post="post"/>
+        <div class="card-content column is-three-quarter">
+          <PostTitle :post="post"/>
+          <PostMeta :post="post"/>
+          <PostContent :post="post"/>
+        </div>
+      </div>
+    </main>
   </div>
 </template>
 <script>
+  import moment from 'moment'
+  import PostImg from '../../components/Post/PostImg'
+  import PostTitle from '../../components/Post/PostTitle'
+  import PostMeta from '../../components/Post/PostMeta'
+  import PostContent from '../../components/Post/PostContent'
+
   export default {
+    components: {
+      PostImg,
+      PostTitle,
+      PostMeta,
+      PostContent
+    },
     async asyncData({ params }) {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))
       // filter out page type
+      imports = imports.filter((post) => !post.attributes.type)
       imports = imports.filter(
         (post) => post.attributes.tags.filter((tag) => tag === params.slug).length
       )
+      // sort by date
+      imports.sort((a, b) =>
+        moment(b.attributes.date, 'YYYY-MM-DD').diff(
+          moment(a.attributes.date, 'YYYY-MM-DD')
+        )
+      )
       return { posts: imports }
+    },
+    methods: {
+      tagTitle() {
+        return this.$route.params.slug + ' Posts'
+      },
+      head() {
+        return {
+          title: 'Posts tagged ' + this.$route.params.slug,
+          meta: [
+            {
+              hid: 'description',
+              name: 'description',
+              content: `All posts tagged ${this.$route.params.slug} on eclecticsaddlebag.com`
+            }
+          ],
+          link: [
+            {
+              rel: 'canonical',
+              href: `https://eclecticsaddlebag.com/tag/${this.$route.params.slug}`
+            }
+          ]
+        }
+      }
     }
   }
 </script>
