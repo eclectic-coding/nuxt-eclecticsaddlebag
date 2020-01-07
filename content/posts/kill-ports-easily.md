@@ -1,7 +1,7 @@
 ---
 title: 'Kill Blocked Ports'
 slug: /kill-ports-easily
-short: Simple fix for the message - Something is already running at port 8000
+short: Have you tried to start a development server and the port is blocked? This post offers a dynamic shell script to fix this problem quickly.
 date: 2019-07-22
 image: blocked.jpg
 tags:
@@ -14,7 +14,7 @@ So you are working hard on your new [Gatsby](https://www.gatsbyjs.org/) site and
 
 **FAIL!**. You are presented with the console error message:
 
-```
+```bash
 Something is already running at port 8000
 Would you like to run the app at another port instead? [Y/n]
 ```
@@ -48,7 +48,7 @@ The alias command only responds to one situation, and one port number. What abou
 The answer is to create a shell script.
 Create the below script:
 
-```
+```bash
 #!/bin/bash
 
 #styles

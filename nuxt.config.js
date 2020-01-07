@@ -1,4 +1,7 @@
 const path = require('path')
+const glob = require('glob')
+
+const markdownPaths = ['posts']
 
 export default {
   mode: 'universal',
@@ -60,6 +63,9 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {},
+  generate: {
+    routes: dynamicMarkdownRoutes()
+  },
   /*
   ** Build configuration
   */
@@ -85,3 +91,14 @@ export default {
     }
   }
 }
+
+function dynamicMarkdownRoutes() {
+  return [].concat(
+    ...markdownPaths.map(mdPath => {
+      return glob.sync(`${mdPath}/*.md`, { cwd: 'content' })
+        .map(filepath => `${mdPath}/${path.basename(filepath, '.md')}`);
+    })
+  );
+}
+
+

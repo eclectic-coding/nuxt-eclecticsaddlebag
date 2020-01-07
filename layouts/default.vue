@@ -6,7 +6,8 @@
         <nuxt/>
       </div>
     </section>
-
+<!--    TODO - Add Post author box -->
+<!--  TODO - Add Footer Component-->
   </div>
 </template>
 
