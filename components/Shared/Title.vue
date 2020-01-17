@@ -1,10 +1,13 @@
 <template>
-  $END$
+  <div>
+    <div class="title is-4">{{ title }}</div>
+    <div class="is-divider-title"></div>
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'Title'
+    props: ['title']
   }
 </script>
 

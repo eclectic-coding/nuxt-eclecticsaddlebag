@@ -1,7 +1,7 @@
 <template>
   <div >
     <h1 class="title">My Blog Posts</h1>
-    <main class="posts">
+    <main>
       <div v-for="post in posts" :key="post.attributes.title"
            class="card card__effect is-horizontal columns has-margin-15">
         <PostImg :post="post" />
