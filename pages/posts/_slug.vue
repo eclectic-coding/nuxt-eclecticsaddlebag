@@ -3,7 +3,7 @@
   <div class="container has-margin-15">
     <div class="post-head">
       <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
-      <img :src="post.attributes.image" v-if="post.attributes.image">
+<!--      <img :src="imgSrc(post)" v-if="post.attributes.image">-->
       <div class="has-margin-bottom-15">
         <div class="subtitle is-6">
           <Fas i="calendar-alt" />
@@ -24,9 +24,11 @@
 <script>
   import Fas from '~/components/Fas'
   import Prism from '~/plugins/prism'
+  import PostImg from '../../components/Post/PostImg'
 
   export default {
     components: {
+      PostImg,
       Fas
     },
     async asyncData({ params }) {
@@ -56,5 +58,10 @@
         return postDate.toDateString()
       }
     },
+    methods: {
+      imgSrc(post) {
+        return require(`~/assets/images/${post.attributes.image}`)
+      },
+    }
   }
 </script>
