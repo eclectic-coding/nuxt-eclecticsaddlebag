@@ -49,7 +49,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'All blog posts on eclecticsaddlebag.com'
+            content: 'All blog posts on EclecticSaddlebag'
           }
         ],
         link: [
