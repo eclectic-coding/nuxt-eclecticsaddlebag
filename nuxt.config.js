@@ -12,15 +12,21 @@ export default {
     title: 'EclecticSaddlebag',
     meta: [
       { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'My miscellaneous ramblings in tech...' },
+      // Open Graph
+      { name: 'og:title', content: 'Eclectic Saddlebag' },
+      { name: 'og:description', content: 'My miscellaneous ramblings in tech...' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://eclecticsaddlebag.com' },
+      { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@EclecticCoding' },
+      { name: 'twitter:title', content: 'Eclectic Saddlebag' },
+      { name: 'twitter:description', content: 'My miscellaneous ramblings in tech...' },
+      { name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
+      { name: 'twitter:image:alt', content: 'NuxtJS Logo' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -55,14 +61,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    ['nuxt-social-meta', {
-      url: 'www.eclecticsaddlebag.com',
-      title: 'Eclectic Saddlebag',
-      description: 'My miscellaneous ramblings ...',
-      locale: 'en-US',
-      twitter: '@EclecticCoding',
-      themeColor: '#ececec'
-    }],
     ['nuxt-fontawesome', {
       imports: [
         {
