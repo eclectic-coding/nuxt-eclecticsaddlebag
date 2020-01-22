@@ -1,6 +1,6 @@
 <template>
 <!--  TODO - Add Hero section-->
-  <div class="container has-margin-15">
+  <div class="container has-margin-top-20">
     <div class="post-head">
       <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
 <!--      <img :src="imgSrc(post)" v-if="post.attributes.image">-->
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="content" v-html="post.html"></div>
+    <div class="content has-margin-bottom-30" v-html="post.html"></div>
   </div>
 </template>
 

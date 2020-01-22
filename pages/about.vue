@@ -1,10 +1,6 @@
 <template>
   <div>
     <h1 class="title is-4">About Me</h1>
-    <figure>
-      <img src="" alt="" />
-    </figure>
-    <button class="button is-primary">Hello</button>
     <div class="content">
       I am a tech-enthusiasts from way back. My first web-site was a HTML 3.2
       frames site build exclusively in MS Notepad, a horrendous undertaking

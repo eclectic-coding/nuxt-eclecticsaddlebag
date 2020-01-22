@@ -1,11 +1,11 @@
 <template>
   <div>
     <NavBar/>
-    <section class="section columns">
-      <div class="column is-offset-1 is-10">
+<!--    <section class="section columns">-->
+<!--      <div class="column is-offset-1 is-10">-->
         <nuxt/>
-      </div>
-    </section>
+<!--      </div>-->
+<!--    </section>-->
 <!--    TODO - Add Post author box -->
 <!--  TODO - Add Footer Component-->
   </div>
