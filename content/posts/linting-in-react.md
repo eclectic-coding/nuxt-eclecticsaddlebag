@@ -1,7 +1,7 @@
 ---
 title: Linting in React
 slug: /linting-in-react
-short: Recently I started experimenting with the idea of code linting via ESLint and Prettier. This article covers the confiruation of ESLint, Prettier, and Husky in a React project.
+short: Recently I started experimenting with the idea of code linting via ESLint and Prettier. This article covers the configuration of ESLint, Prettier, and Husky in a React project.
 date: 2020-01-26
 image: organized.jpg
 tags:
