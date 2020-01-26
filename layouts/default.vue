@@ -1,21 +1,20 @@
 <template>
-  <div>
+  <div class="is-full-height">
     <NavBar/>
-<!--    <section class="section columns">-->
-<!--      <div class="column is-offset-1 is-10">-->
         <nuxt/>
-<!--      </div>-->
-<!--    </section>-->
+
+    <Footer />
 <!--    TODO - Add Post author box -->
-<!--  TODO - Add Footer Component-->
   </div>
 </template>
 
 <script>
   import NavBar from '../components/NavBar'
+  import ArticleCard from '../components/ArticleCard'
+  import Footer from '../components/Shared/Footer'
 
   export default {
-    components: { NavBar }
+    components: { Footer, NavBar }
   }
 </script>
 
