@@ -1,7 +1,8 @@
 <template>
-  <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+  <div>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="container">
+      <div class="navbar-brand navbar-start">
         <a class="navbar-item" href="/">
           <h1 class="title">Eclectic Saddlebag</h1>
         </a>
@@ -22,6 +23,7 @@
           <NuxtLink to="/" class="navbar-item">Home</NuxtLink>
           <NuxtLink to="/posts" class="navbar-item">Blog</NuxtLink>
         </div>
+      </div>
       </div>
     </nav>
   </div>

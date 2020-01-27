@@ -1,22 +1,8 @@
 <template>
-  <div class="is-full-height">
-    <NavBar/>
-        <nuxt/>
-
-    <Footer />
-<!--    TODO - Add Post author box -->
+  <div>
+    <nuxt/>
   </div>
 </template>
-
-<script>
-  import NavBar from '../components/NavBar'
-  import ArticleCard from '../components/ArticleCard'
-  import Footer from '../components/Shared/Footer'
-
-  export default {
-    components: { Footer, NavBar }
-  }
-</script>
 
 <style>
   html {
