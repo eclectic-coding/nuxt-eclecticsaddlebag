@@ -1,4 +1,6 @@
 <template>
+  <div>
+  <NavBar />
 <!--  TODO - Add Hero section-->
   <div class="container has-margin-top-20">
     <div class="post-head">
@@ -19,15 +21,18 @@
     </div>
     <div class="content has-margin-bottom-30" v-html="post.html"></div>
   </div>
+  </div>
 </template>
 
 <script>
   import Fas from '~/components/Fas'
   import Prism from '~/plugins/prism'
   import PostImg from '../../components/Post/PostImg'
+  import NavBar from '../../components/NavBar'
 
   export default {
     components: {
+      NavBar,
       PostImg,
       Fas
     },

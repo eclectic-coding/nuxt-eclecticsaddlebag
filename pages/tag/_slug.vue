@@ -1,20 +1,23 @@
 <template>
   <div>
-<!--    TODO - add tag cloud-->
-    <div :key="$route.params.slug" class="title is-4">
-      {{ tagTitle() }}
-    </div>
-    <main class="posts">
-      <div v-for="post in posts" :key="post.attributes.title"
-           class="card card__effect is-horizontal columns has-margin-15">
-        <PostImg :post="post"/>
-        <div class="card-content column is-three-quarter">
-          <PostTitle :post="post"/>
-          <PostMeta :post="post"/>
-          <PostContent :post="post"/>
-        </div>
+    <NavBar />
+    <!--    TODO - add tag cloud-->
+    <div class="container">
+      <div :key="$route.params.slug" class="title is-3 has-margin-top-20">
+        {{ tagTitle() }}
       </div>
-    </main>
+      <main class="posts">
+        <div v-for="post in posts" :key="post.attributes.title"
+             class="card card__effect is-horizontal columns has-margin-15">
+          <PostImg :post="post" />
+          <div class="card-content column is-three-quarter">
+            <PostTitle :post="post" />
+            <PostMeta :post="post" />
+            <PostContent :post="post" />
+          </div>
+        </div>
+      </main>
+    </div>
   </div>
 </template>
 <script>
@@ -23,9 +26,11 @@
   import PostTitle from '../../components/Post/PostTitle'
   import PostMeta from '../../components/Post/PostMeta'
   import PostContent from '../../components/Post/PostContent'
+  import NavBar from '../../components/NavBar'
 
   export default {
     components: {
+      NavBar,
       PostImg,
       PostTitle,
       PostMeta,

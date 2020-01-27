@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <NavBar />
     <h1 class="title has-margin-top-30">Blog Posts</h1>
     <main>
       <div v-for="post in posts" :key="post.attributes.title"
@@ -20,9 +21,10 @@
   import PostTitle from '../../components/Post/PostTitle'
   import PostContent from '../../components/Post/PostContent'
   import PostMeta from '../../components/Post/PostMeta'
+  import NavBar from '../../components/NavBar'
 
   export default {
-    components: { PostMeta, PostContent, PostTitle, PostImg },
+    components: { NavBar, PostMeta, PostContent, PostTitle, PostImg },
     async asyncData() {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))
