@@ -7,7 +7,10 @@
           <h1 class="title">
             Welcome to my Eclectic Corner
           </h1>
-          <div>Be sure to check out my <button class="button is-primary">Tech Blog</button></div>
+          <div>Be sure to check out my
+            <NuxtLink role="button" to="/posts" class="button is-primary">
+            Tech Blog</NuxtLink>
+          </div>
         </div>
       </div>
       <div class="hero-foot">
