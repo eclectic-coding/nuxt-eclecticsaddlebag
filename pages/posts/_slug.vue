@@ -8,10 +8,9 @@
     </vue-scroll-indicator>
   <NavBar />
 <!--  TODO - Add Hero section-->
-  <div class="container has-margin-top-20">
+  <div class="container has-margin-top-20 has-padding-20">
     <div class="post-head">
-      <h1 class="title has-margin-bottom-5">{{post.attributes.title}}</h1>
-<!--      <img :src="imgSrc(post)" v-if="post.attributes.image">-->
+      <h2 class="title is-size-4 has-margin-bottom-5">{{post.attributes.title}}</h2>
       <div class="has-margin-bottom-15">
         <div class="subtitle is-6">
           <Fas i="calendar-alt" />
