@@ -46,7 +46,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/prism', ssr: false }
+    { src: '~/plugins/prism', ssr: false },
+    { src: '~/plugins/vue-scroll', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
