@@ -20,7 +20,7 @@
     "@nuxtjs/axios": "5.9.5",
     "@nuxtjs/bulma": "1.2.7",
     "bulma-helpers": "0.3.10",
-    "frontmatter-markdown-loader": "3.2.1",
+    "frontmatter-markdown-loader": "3.3.0",
     "moment": "2.24.0",
     "nuxt": "2.12.1",
     "nuxt-fontawesome": "0.4.0",
