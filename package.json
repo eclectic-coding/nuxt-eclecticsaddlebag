@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "1.1.8",
-    "@fortawesome/fontawesome-free": "5.12.0",
-    "@fortawesome/fontawesome-svg-core": "1.2.26",
-    "@fortawesome/free-brands-svg-icons": "5.12.0",
-    "@fortawesome/free-solid-svg-icons": "5.12.0",
+    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.28",
+    "@fortawesome/free-brands-svg-icons": "5.13.0",
+    "@fortawesome/free-solid-svg-icons": "5.13.0",
     "@fortawesome/vue-fontawesome": "0.1.9",
-    "@nuxtjs/axios": "5.9.4",
-    "@nuxtjs/bulma": "1.2.6",
-    "bulma-helpers": "0.3.8",
-    "frontmatter-markdown-loader": "3.1.0",
+    "@nuxtjs/axios": "5.9.7",
+    "@nuxtjs/bulma": "1.2.7",
+    "bulma-helpers": "0.3.10",
+    "frontmatter-markdown-loader": "3.3.0",
     "moment": "2.24.0",
-    "nuxt": "2.11.0",
+    "nuxt": "2.12.2",
     "nuxt-fontawesome": "0.4.0",
     "prismjs": "1.19.0"
   },
@@ -30,6 +30,6 @@
     "@nuxtjs/style-resources": "1.0.0",
     "node-sass": "4.13.1",
     "sass-loader": "8.0.2",
-    "vue-scroll-indicator": "^0.1.3"
+    "vue-scroll-indicator": "0.1.3"
   }
 }
