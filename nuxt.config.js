@@ -5,9 +5,7 @@ const markdownPaths = ['posts']
 
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+  // Headers of the page
   head: {
     title: 'EclecticSaddlebag',
     meta: [
@@ -19,14 +17,14 @@ export default {
       { name: 'og:description', content: 'My miscellaneous ramblings in tech...' },
       { name: 'og:type', content: 'website' },
       { name: 'og:url', content: 'https://eclecticsaddlebag.com' },
-      { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+      // { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
       // Twitter Card
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: '@EclecticCoding' },
       { name: 'twitter:title', content: 'Eclectic Saddlebag' },
       { name: 'twitter:description', content: 'My miscellaneous ramblings in tech...' },
-      { name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
-      { name: 'twitter:image:alt', content: 'NuxtJS Logo' }
+      // { name: 'twitter:image', content: 'https://nuxtjs.org/meta1640640640_640.png' },
+      // { name: 'twitter:image:alt', content: 'NuxtJS Logo' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -57,8 +55,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    // '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
