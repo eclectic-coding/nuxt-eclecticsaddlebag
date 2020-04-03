@@ -3,7 +3,7 @@
     <NavBar />
     <h1 class="title has-margin-top-30 has-padding-left-15">Blog Posts</h1>
     <main>
-      <div v-for="post in posts" :key="post.attributes.title"
+      <div v-for="post in paginatedData" :key="post.attributes.title"
            class="card card__effect is-horizontal columns has-margin-15">
         <PostImg :post="post" />
         <div class="card-content column is-three-quarter">
@@ -12,6 +12,12 @@
           <PostContent :post="post" />
         </div>
       </div>
+      <nav class="pagination" role="navigation" aria-label="pagination">
+        <a @click="prevPage" :disabled="pageNumber===0" class="pagination-previous">Previous</a>
+        <a @click="nextPage" :disabled="pageNumber >= pageCount -1" class="pagination-next">Next page</a>
+      </nav>
+<!--      <button @click="prevPage" :disabled="pageNumber===0">Previous</button>-->
+<!--      <button @click="nextPage" :disabled="pageNumber >= pageCount -1">Next</button>-->
     </main>
   </div>
 </template>
@@ -25,6 +31,18 @@
 
   export default {
     components: { NavBar, PostMeta, PostContent, PostTitle, PostImg },
+    data() {
+      return {
+        pageNumber: 0
+      }
+    },
+    props: {
+      size: {
+        type: Number,
+        required: false,
+        default: 5
+      }
+    },
     async asyncData() {
       const resolve = await require.context('~/content/posts/', true, /\.md$/)
       let imports = resolve.keys().map((key) => resolve(key))
@@ -42,6 +60,24 @@
       parsedDate(post) {
         const postDate = new Date(post.attributes.date)
         return postDate.toDateString()
+      },
+      nextPage() {
+        this.pageNumber++
+      },
+      prevPage() {
+        this.pageNumber--
+      }
+    },
+    computed: {
+      pageCount() {
+        let l = this.posts.length,
+          s = this.size
+        return Math.ceil(l/s)
+      },
+      paginatedData() {
+        const start = this.pageNumber * this.size,
+          end = start + this.size
+        return this.posts.slice(start, end)
       }
     },
     head() {
