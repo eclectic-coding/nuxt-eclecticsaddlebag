@@ -1,5 +1,5 @@
 ---
 menu:
   - { name: "Home", slug: "/" }
-  - { name: "Blog", slug: "/blog" }
+  - { name: "Blog", slug: "/posts" }
 ---

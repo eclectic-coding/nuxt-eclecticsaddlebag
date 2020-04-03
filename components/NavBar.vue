@@ -17,7 +17,7 @@
         <div id="navbarBasicExample" class="navbar-menu"
              @click="showNav = !showNav" :class="{ 'is-active': showNav}">
           <div class="navbar-end" v-for="title of menu" :key="menu.name">
-            <nuxt-link to="title.slug" class="navbar-item">{{ title.name }}</nuxt-link>
+            <nuxt-link :to="title.slug" class="navbar-item">{{ title.name }}</nuxt-link>
           </div>
         </div>
       </div>
