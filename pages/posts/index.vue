@@ -16,8 +16,6 @@
         <a @click="prevPage" :disabled="pageNumber===0" class="pagination-previous">Previous</a>
         <a @click="nextPage" :disabled="pageNumber >= pageCount -1" class="pagination-next">Next page</a>
       </nav>
-<!--      <button @click="prevPage" :disabled="pageNumber===0">Previous</button>-->
-<!--      <button @click="nextPage" :disabled="pageNumber >= pageCount -1">Next</button>-->
     </main>
   </div>
 </template>

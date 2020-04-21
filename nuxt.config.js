@@ -45,7 +45,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/prism', ssr: false },
-    { src: '~/plugins/vue-scroll', ssr: false }
+    // { src: '~/plugins/vue-scroll', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
