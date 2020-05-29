@@ -19,7 +19,7 @@
     "@fortawesome/vue-fontawesome": "0.1.9",
     "@nuxtjs/axios": "5.10.3",
     "@nuxtjs/bulma": "1.2.7",
-    "bulma-helpers": "0.3.10",
+    "bulma-helpers": "0.3.11",
     "frontmatter-markdown-loader": "3.5.0",
     "moment": "2.26.0",
     "nuxt": "2.12.2",
