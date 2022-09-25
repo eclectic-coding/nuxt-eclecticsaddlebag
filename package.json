@@ -21,7 +21,7 @@
     "@nuxtjs/bulma": "1.2.7",
     "bulma-helpers": "0.3.12",
     "frontmatter-markdown-loader": "3.6.0",
-    "moment": "2.27.0",
+    "moment": "2.29.4",
     "nuxt": "2.13.3",
     "nuxt-fontawesome": "0.4.0",
     "prismjs": "1.20.0"
