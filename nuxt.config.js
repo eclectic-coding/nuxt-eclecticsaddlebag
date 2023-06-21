@@ -4,7 +4,6 @@ const glob = require('glob')
 const markdownPaths = ['posts']
 
 export default {
-  mode: 'universal',
   // Headers of the page
   head: {
     title: 'EclecticSaddlebag',
